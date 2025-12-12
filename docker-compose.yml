@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  jrnl:
+    build: .
+    image: jrnl-app:latest
+    container_name: jrnl-container
+    volumes:
+      - ./journal_data:/root/.config/jrnl
+    stdin_open: true
+    tty: true
+    command: --help
