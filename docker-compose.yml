@@ -9,4 +9,5 @@ services:
       - ./journal_data:/root/.config/jrnl
     stdin_open: true
     tty: true
-    command: --help
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["while true; do sleep 30; done"]
